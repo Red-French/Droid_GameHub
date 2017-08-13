@@ -1,14 +1,10 @@
 package net.redfrench.mylearningapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
-import android.text.Layout;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,7 +12,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.util.Log;
 
-import java.sql.SQLOutput;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,14 +45,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
         beginPlayBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                linLayout.setBackgroundColor(Color.parseColor("#003399"));
+                linLayout.setGravity(Gravity.CENTER_HORIZONTAL);
                 setContentView(linLayout);
             }
         });
